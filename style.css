@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background-color: #121212; /* Dark background */
+    color: white; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#heading {
+    color: aquamarine;
+    height: 200px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E1E;
+    width: 100%;
+}
+
+#heading h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+#allCryptoContainer {
+    display: flex;
+    flex-wrap: wrap; /* Wrap elements to next line */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements */
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.singularCrypto:hover{
+    background-color: aquamarine;
+}
+
+@keyframes spin{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
+
+/* Make singularCrypto wider to cover most of the screen */
+.singularCrypto {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%; /* Covers 90% of screen width */
+    max-width: 1200px; /* Restricts width on very large screens */
+    padding: 20px;
+    gap: 20px;
+    background-color: #1E1E1E;
+    border: 2px solid aquamarine;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+.logoImage{
+    animation: spin 2s infinite ease-in-out alternate;   
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
